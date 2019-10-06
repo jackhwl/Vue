@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="vue.js"></script>    
+    <title>My Burger</title>
+  </head>
+  <body>
+
+    <div id="app">
+        <h1 v-once>{{ title }}</h1>
+        <input type="text" v-on:input="changeTitle">
+
+        <p>{{ sayHello() }} <a v-bind:href="link">Google</a></p>
+        <hr>
+        <p v-html="finishedLink"></p>
+    </div>
+
+    <div id="exercise">
+       <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
+        <p>VueJS is pretty cool - {{name}} ({{age}})</p>
+        <!-- 2) Output your age, multiplied by 3 -->
+        <p>{{age * 3}}</p>
+        <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
+        <p>{{showRnd()}}</p>
+        <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
+        <div>
+            <img style="width:100px;height:100px" v-bind:src="ilink">
+        </div>
+        <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+        <div>
+            <input type="text" v-bind:value="name">
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#exercise',
+            data: {
+                name: 'Wenlin Huang',
+                age: 42,
+                ilink: 'http://fastdecals.com/shop/images/detailed/0/42_2COLOR_nascar.jpg'
+            },
+            methods: {
+                showRnd: function() {
+                    return Math.random();
+                }
+            }
+        });
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Hello World!',
+                link: 'http://google.com',
+                finishedLink: '<a href="http://google.com">Google 2</a>'
+            },
+            methods: {
+                changeTitle: function(event) {
+                    this.title = event.target.value
+                },
+                sayHello: function() {
+                    this.title = "Hello";
+                    return this.title;
+                }
+            }
+        });
+    </script>
+  </body>
+</html>
