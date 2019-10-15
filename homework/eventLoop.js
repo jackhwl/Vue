@@ -39,3 +39,23 @@ setTimeout(() => {
 setTimeout(() => {
     console.log(1);
 }, 0);
+
+var test = function(){
+    console.log('hello world')
+    return 'fsjohnhuang'
+  }
+  test.call() // ①
+  //Function.prototype.call(test) // ②
+  //Function.prototype.call.call.call(test) // ③
+
+  //Function.prototype.call.call(Function.prototype.call, test) // ④
+
+  var test2 = function(){
+    console.log(this)
+    return 'fsjohnhuang'
+  }
+  //test2() // 控制台显示window对象信息，返回值为fsjohnhuang
+  test2.call({msg: 'hello world'}) // 控制台显示{msg:'hello world'}对象信息，返回值为fsjohnhuang
+
+  const cpus = require('os').cpus().length;
+  console.log(cpus);
