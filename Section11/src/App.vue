@@ -7,7 +7,8 @@
                     <hr>
                     <div class="form-group">
                         <label for="email">Mail</label>
-                        <input  v-model="userData.email"
+                        <input  :value="userData.email"
+                                @input="userData.email = $event.target.value"
                                 type="text"
                                 id="email"
                                 class="form-control">
@@ -79,13 +80,13 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
                     <label for="male">
-                        <input
+                        <input  v-model="gender"
                                 type="radio"
                                 id="male"
                                 value="Male"> Male
                     </label>
                     <label for="female">
-                        <input
+                        <input  v-model="gender"
                                 type="radio"
                                 id="female"
                                 value="Female"> Female
@@ -98,21 +99,29 @@
                     <select
                             id="priority"
                             class="form-control">
-                        <option></option>
+                        <option v-for="priority in priorities" 
+                            :selected="priority=='Medium'" :key="priority">
+                            {{ priority }}
+                        </option>
                     </select>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                    <button
+                    <app-switch v-model="dataSwitch"></app-switch>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                    <button @click.prevent="submitted"
                             class="btn btn-primary">Submit!
                     </button>
                 </div>
             </div>
         </form>
         <hr>
-        <div class="row">
+        <div class="row" v-if="isSubmitted">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -125,11 +134,11 @@
                         <p style="white-space: pre">Message: {{message}} </p>
                         <p><strong>Send Mail? {{sendMail}}</strong></p>
                         <ul>
-                            <li v-for="item in sendMail">{{ item }}</li>
+                            <li v-for="item in sendMail" :key="item">{{ item }}</li>
                         </ul>
-                        <p>Gender:</p>
+                        <p>Gender: {{gender}}</p>
                         <p>Priority:</p>
-                        <p>Switched:</p>
+                        <p>Switched: {{dataSwitch}}</p>
                     </div>
                 </div>
             </div>
@@ -138,6 +147,8 @@
 </template>
 
 <script>
+    import Switch from './Switch.vue';
+
     export default {
         data() {
             return {
@@ -147,7 +158,11 @@
                   age: 27
                 },
                 message: 'A new Text',
-                sendMail: []                
+                sendMail: [],
+                gender: 'Male',
+                priorities: ['High', 'Medium', 'Low'],
+                dataSwitch: true,
+                isSubmitted: false
             }
         },
         computed: {
@@ -159,6 +174,14 @@
                     this.sendMail = newValue ? ['SendMail', 'SendInfoMail', 'SendCard', 'SendCall'] : [];
                 }
             }
+        },
+        methods: {
+            submitted() {
+                this.isSubmitted = true;
+            }
+        },
+        components: {
+            appSwitch: Switch
         }
     }
 </script>
