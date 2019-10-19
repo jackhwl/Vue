@@ -42,17 +42,35 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                     <div class="form-group">
+                         <label for="sendAll">
+                            <input  v-model="sendAll"
+                                    type="checkbox"
+                                    id="sendAll"
+                                    value="SendAll"> Check All
+                        </label>
                         <label for="sendmail">
-                            <input
+                            <input  v-model="sendMail"
                                     type="checkbox"
                                     id="sendmail"
                                     value="SendMail"> Send Mail
                         </label>
                         <label for="sendInfomail">
-                            <input
+                            <input  v-model="sendMail"
                                     type="checkbox"
                                     id="sendInfomail"
                                     value="SendInfoMail"> Send Infomail
+                        </label>
+                        <label for="sendCard">
+                            <input  v-model="sendMail"
+                                    type="checkbox"
+                                    id="sendCard"
+                                    value="SendCard"> Send a Card
+                        </label>
+                        <label for="sendCall">
+                            <input  v-model="sendMail"
+                                    type="checkbox"
+                                    id="sendCall"
+                                    value="SendCall"> Send Phone call
                         </label>
                     </div>
 
@@ -105,9 +123,9 @@
                         <p>Password: {{userData.password}}</p>
                         <p>Age: {{userData.age}}</p>
                         <p style="white-space: pre">Message: {{message}} </p>
-                        <p><strong>Send Mail?</strong></p>
+                        <p><strong>Send Mail? {{sendMail}}</strong></p>
                         <ul>
-                            <li></li>
+                            <li v-for="item in sendMail">{{ item }}</li>
                         </ul>
                         <p>Gender:</p>
                         <p>Priority:</p>
@@ -128,8 +146,18 @@
                   password: '',
                   age: 27
                 },
-                message: 'A new Text'
-                
+                message: 'A new Text',
+                sendMail: []                
+            }
+        },
+        computed: {
+            sendAll: {
+                get() {
+                    return this.sendMail.length == 4;
+                },
+                set(newValue) {
+                    this.sendMail = newValue ? ['SendMail', 'SendInfoMail', 'SendCard', 'SendCall'] : [];
+                }
             }
         }
     }
