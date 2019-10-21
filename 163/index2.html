@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'></div>
+    <script type="text/javascript" src="vue2_reactive.js"></script>
+    <script type="text/javascript">
+        var vm = new vi2();
+        setTimeout(function(){
+            console.log('changes');
+            console.log(vm.$data);
+            vm.$data.a=150;
+            vm.$data.foo.bar='child object 400';
+        },2000)    
+    </script>
+</body>
+</html>
