@@ -15,11 +15,12 @@ module.exports = {
         loader: 'vue',
         options: {
           // vue-loader options go here
-        }
+        },
+
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel',        
         exclude: /node_modules/
       },
       {
