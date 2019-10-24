@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router';
+import Vue from '../../Section17/node_modules/vue'
+import VueRouter from '../../Section17/node_modules/vue-router';
 import App from './App.vue'
 import { routes } from './routes';
 
