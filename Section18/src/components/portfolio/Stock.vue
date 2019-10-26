@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { mapAction } from 'vuex';
+import { mapActions } from 'vuex';
 export default {
     props: ['stock'],
     data() {
@@ -30,7 +30,7 @@ export default {
         }
     },
     methods: {
-        ...mapAction([
+        ...mapActions([
             'sellStock'
         ]),
         sellStock() {
