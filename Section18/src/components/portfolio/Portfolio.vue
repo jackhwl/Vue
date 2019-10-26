@@ -16,9 +16,6 @@ export default {
     },
     components: {
         appStock: Stock
-    },
-    created() {
-        console.log(this);
     }
 }
 </script>

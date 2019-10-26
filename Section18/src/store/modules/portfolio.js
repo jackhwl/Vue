@@ -34,16 +34,10 @@ const actions = {
 };
 
 const getters = {
-    // TODO {id, quantity} {name, price}
     stockPortfolio(state, getters) {
-        return state.stocks.map(stock => {
-            const record = getters.stocks.find(element => element.id == stock.id);
-            return {
-                id: stock.id,
-                quantity: stock.quantity,
-                name: record.name,
-                price: record.price
-            };
+        return state.stocks.map(({id, quantity}) => {
+            const {name, price} = getters.stocks.find(element => element.id == id);
+            return { id, quantity, name, price };
         });
     },
     funds(state) {
