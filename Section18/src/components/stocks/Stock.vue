@@ -9,7 +9,7 @@
             </div>
             <div class="panel-body">
                 <div class="pull-left">
-                    <input type="number" class="form-control" placeholder="Quantity" v-model="quantity">
+                    <input type="number" class="form-control" placeholder="Quantity" v-model.number="quantity">
                 </div>
                 <div class="pull-right">
                     <button class="btn btn-success" 
