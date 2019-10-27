@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<script>c 
+<script>
 export default {
     computed: {
         funds() {
