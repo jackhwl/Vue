@@ -1,6 +1,6 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router';
-import VueResource from 'vue-resource';
+import Vue from '../../axios--01-start/node_modules/vue'
+import VueRouter from '../../axios--01-start/node_modules/vue-router';
+import VueResource from '../../axios--01-start/node_modules/vue-resource';
 
 import App from './App.vue';
 import { routes } from './routes';

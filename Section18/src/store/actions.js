@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from '../../../axios--01-start/node_modules/vue/types';
 
 export const loadData = ({commit}) => {
     Vue.http.get('data.json')
