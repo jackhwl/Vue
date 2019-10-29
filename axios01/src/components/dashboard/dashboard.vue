@@ -4,7 +4,16 @@
     <p>You should only get here if you're authenticated!</p>
   </div>
 </template>
-
+<script>
+import axios from 'axios';
+export default {
+  created() {
+    axios.get("https://udemy-vue-stock-trader-7de18.firebaseio.com/users.json")
+      .then(res => console.log(res))
+      .catch(error => console.error(error));
+  }
+}
+</script>
 <style scoped>
   h1, p {
     text-align: center;
