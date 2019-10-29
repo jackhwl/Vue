@@ -25,6 +25,7 @@
 </template>
 
 <script>
+  import axios from 'axios';
   export default {
     data () {
       return {
@@ -38,7 +39,11 @@
           email: this.email,
           password: this.password,
         }
-        console.log(formData)
+        console.log(formData);
+        this.$store.dispatch('signin', {
+          email: formData.email,
+          password: fromData.password
+        })
       }
     }
   }

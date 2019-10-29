@@ -6,7 +6,7 @@ import router from './router'
 import store from './store'
 
 axios.defaults.baseURL = "https://udemy-vue-stock-trader-7de18.firebaseio.com";
-axios.defaults.headers.common['Authorization'] = 'sd';
+//axios.defaults.headers.common['Authorization'] = 'sd';
 axios.defaults.headers.get['Accepts'] = 'applicaton/json';
 
 const reqInterceptor = axios.interceptors.request.use(config => {
