@@ -106,7 +106,7 @@
         }
 
         console.log(formData)
-        axios.post("https://udemy-vue-stock-trader-7de18.firebaseio.com/users.json", formData)
+        axios.post("/users.json", formData)
           .then(res => console.log(res))
           .catch(error => console.error(error))
       }
