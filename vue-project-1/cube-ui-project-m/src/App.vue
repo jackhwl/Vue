@@ -1,16 +1,15 @@
 <template>
-  <div class="home">
-    <router-link to="/">Home</router-link>
-    <router-link to="/course">Course</router-link>
-    <router-link to="/profile">Profile</router-link>
-    <router-view></router-view>
-
-     <cube-tab-bar
-    v-model="selectedLabelDefault"
-    :data="tabs"
-    @change="changeHandler">
-  </cube-tab-bar>
-
+  <div id="app">
+    <div class="container">
+      <router-view></router-view>
+    </div>
+    <div class="footer">
+      <cube-tab-bar
+          v-model="selectedLabelDefault"
+          :data="tabs"
+          @change="changeHandler">
+        </cube-tab-bar>
+    </div>
   </div>
 </template>
 
@@ -58,5 +57,20 @@ export default {
 </script>
 
 <style lang="stylus">
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
 
+#app {
+  display: flex;
+  flex-direction : column;
+}
+.container {
+  flex: 1;
+  overflow: scroll;
+}
+.footer {
+  background-color: #ccc;
+}
 </style>
