@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav class="main-nav">
         <h2>Menu</h2>
         <ul>
             <li><a href="">Home</a></li>
@@ -19,8 +19,8 @@ export default {
     }
 }
 </script>
-<style scoped>
-nav{
+<style>
+nav.main-nav{
     text-align: center;
 }
 nav ul{
