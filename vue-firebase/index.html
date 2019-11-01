@@ -20,6 +20,9 @@
       <h2>{{ title }}</h2>
       <button @click.alt="logMessage">alt-click me to test event modifier</button>
       <a href="http://www.google.com" @click.prevent="logMessage">Google</a>
+      <br>
+      <p v-if="showName">Mario</p>
+      <button @click="toggleName">showname: {{showName}}</button>
     </div>
 
     <script src="app.js"></script>

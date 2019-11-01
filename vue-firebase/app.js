@@ -2,7 +2,8 @@ new Vue({
   el: '#app',
   data: {
     title: 'Becoming a Vue ninja',
-    name: 'Ryu'
+    name: 'Ryu',
+    showName: true
   },
   methods: {
     updateName(e){
@@ -11,6 +12,9 @@ new Vue({
     },
     logMessage() {
       console.log('hello')
+    },
+    toggleName() {
+      this.showName = !this.showName
     }
   }
 })
