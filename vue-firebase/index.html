@@ -23,6 +23,15 @@
       <br>
       <p v-if="showName">Mario</p>
       <button @click="toggleName">showname: {{showName}}</button>
+      <br>
+      <ul>
+        <li v-for="item in items">{{item}}</li>
+      </ul>
+      <div v-for="(ninja, index) in ninjas">
+          <p>{{index}} {{ ninja.name}}</p>
+          <p>{{ ninja.age}}</p>
+          <p>{{ ninja.belt}}</p>
+      </div>
     </div>
 
     <script src="app.js"></script>
