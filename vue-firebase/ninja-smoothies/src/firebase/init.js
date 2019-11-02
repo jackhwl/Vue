@@ -3,7 +3,7 @@ import firestore from 'firebase/firestore'
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-apiKey: "AIzaSyAzK2S9W9w7Vm0eaitE8QXUkOj7AgrNxWY",
+apiKey: "",
 authDomain: "udemy-ninja-smoothies-75ec1.firebaseapp.com",
 databaseURL: "https://udemy-ninja-smoothies-75ec1.firebaseio.com",
 projectId: "udemy-ninja-smoothies-75ec1",
@@ -16,8 +16,8 @@ measurementId: "G-06VLX4NKHX"
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-firebaseApp.firestore().settings({ timestampsInSnapshots: true })
+const firebaseApp =  !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
+// firebaseApp.firestore().settings({ timestampsInSnapshots: true })
 
 // export firestore database
 export default firebaseApp.firestore()
