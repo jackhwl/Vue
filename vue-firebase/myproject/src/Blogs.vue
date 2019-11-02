@@ -1,10 +1,10 @@
 <template>
     <div class="blogs">
-        <h2>{{ blogTitle }}</h2>
-        <button @click="changeTitle">Change Title</button>
-        <div v-for="post in posts" :key="post.id">
+        <h2>Blogs</h2>
+        <input type="text" v-model="searchTerm">
+        <div v-for="post in filteredPosts" :key="post.id">
             <h3>{{ post.title }}</h3>
-            <p>{{ post.body }}</p>
+            <p>{{ post.body | snippet }}</p>
         </div>
     </div>
 </template>
@@ -16,14 +16,16 @@ export default {
     name: 'Blogs',
     data() {
         return {
-            blogTitle: 'Blogs',
-            posts: []
+            posts: [],
+            searchTerm: ''
+        }
+    },
+    computed: {
+        filteredPosts() {
+            return this.posts.filter(post => post.title.match(this.searchTerm))
         }
     },
     methods: {
-        changeTitle() {
-            this.blogTitle = 'Amazing Blog Site'
-        }
     },
     beforeCreate(){
         //alert('beforeCreate hook')
