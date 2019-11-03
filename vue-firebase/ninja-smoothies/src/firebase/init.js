@@ -3,7 +3,7 @@ import firestore from 'firebase/firestore'
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-apiKey: "",
+apiKey: "AIzaSyAzK2S9W9w7Vm0eaitE8QXUkOj7AgrNxWY",
 authDomain: "udemy-ninja-smoothies-75ec1.firebaseapp.com",
 databaseURL: "https://udemy-ninja-smoothies-75ec1.firebaseio.com",
 projectId: "udemy-ninja-smoothies-75ec1",
