@@ -13,11 +13,17 @@
 
 <script>
 export default {
-    data() {
-        return {
-            online: true
+    props:['status'],
+    computed: {
+        online() {
+            return this.status == 'online'
         }
     }
+    // data() {
+    //     return {
+    //         online: false
+    //     }
+    // }
 }
 </script>
 
