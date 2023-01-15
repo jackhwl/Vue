@@ -11,3 +11,4 @@
 * Conditionally Displaying Content with v-if and v-show
 * Repeating Elements with v-for
 * Styling Child Components
+* Conditionally Applying Styles with Style Bindings

@@ -2,7 +2,7 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
     <div class="top-row">
-      <div class="top part">
+      <div class="top part" :style="headBorderStyle">
         <div class="robot-name">
           {{ selectedRobot.head.title }}
           <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
@@ -72,6 +72,9 @@ function getNextValidIndex(index, length) {
 export default {
   name: 'RobertBuilder',
   computed: {
+    headBorderStyle() {
+      return { border: this.selectedRobot.head.onSale ? '3px solid red' : '3px solid #aaa' }
+    },
     selectedRobot() {
       return {
         head: availableParts.heads[this.selectedHeadIndex],
