@@ -5,3 +5,4 @@
 * Creating Your First Component
 * Binding Attributes to Data with v-bind
 * Binding to Events with v-on
+* Using Shorthand Bindings
