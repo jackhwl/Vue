@@ -9,3 +9,4 @@
 * Binding to Computed Properties
 * Displaying Data with Interpolation
 * Conditionally Displaying Content with v-if and v-show
+* Repeating Elements with v-for
