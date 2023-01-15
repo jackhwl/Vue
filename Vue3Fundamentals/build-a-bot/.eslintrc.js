@@ -16,6 +16,6 @@ module.exports = {
     'linebreak-style': 0,
     'operator-linebreak': 0,
     "comma-dangle": ["error", "never"],
-    'semi': [2, "never"]
+    'semi': 0
   },
 };

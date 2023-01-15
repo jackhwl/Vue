@@ -4,3 +4,4 @@
 ## Section 3: Creating Vue.js Components and Using Template Syntax
 * Creating Your First Component
 * Binding Attributes to Data with v-bind
+* Binding to Events with v-on
