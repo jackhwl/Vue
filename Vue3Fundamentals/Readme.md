@@ -7,3 +7,4 @@
 * Binding to Events with v-on
 * Using Shorthand Bindings
 * Binding to Computed Properties
+* Displaying Data with Interpolation
