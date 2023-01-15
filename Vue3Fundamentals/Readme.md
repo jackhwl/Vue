@@ -3,3 +3,4 @@
 * Creating the Home Page
 ## Section 3: Creating Vue.js Components and Using Template Syntax
 * Creating Your First Component
+* Binding Attributes to Data with v-bind
