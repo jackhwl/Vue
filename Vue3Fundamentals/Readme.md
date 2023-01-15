@@ -8,3 +8,4 @@
 * Using Shorthand Bindings
 * Binding to Computed Properties
 * Displaying Data with Interpolation
+* Conditionally Displaying Content with v-if and v-show
