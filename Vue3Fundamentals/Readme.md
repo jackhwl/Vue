@@ -12,3 +12,4 @@
 * Repeating Elements with v-for
 * Styling Child Components
 * Conditionally Applying Styles with Style Bindings
+* Conditionally Applying Classes with Class Bindings

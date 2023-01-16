@@ -2,7 +2,7 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
     <div class="top-row">
-      <div class="top part" :style="headBorderStyle">
+      <div :style="headBorderStyle" :class="[saleBgcolorClass, 'top', 'part']">
         <div class="robot-name">
           {{ selectedRobot.head.title }}
           <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
@@ -72,6 +72,9 @@ function getNextValidIndex(index, length) {
 export default {
   name: 'RobertBuilder',
   computed: {
+    saleBgcolorClass() {
+      return this.selectedRobot.head.onSale ? 'sale-bgcolor' : ''
+    },
     headBorderStyle() {
       return { border: this.selectedRobot.head.onSale ? '3px solid red' : '3px solid #aaa' }
     },
@@ -265,5 +268,8 @@ export default {
 }
 .cost {
   text-align: right;
+}
+.sale-bgcolor {
+  background-color: pink;
 }
 </style>
