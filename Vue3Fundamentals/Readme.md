@@ -14,3 +14,4 @@
 * Conditionally Applying Styles with Style Bindings
 * Conditionally Applying Classes with Class Bindings
 * Using SASS and Other CSS Pre-processors
+* Using Component Lifecycle Hooks

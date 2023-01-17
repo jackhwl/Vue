@@ -71,6 +71,9 @@ function getNextValidIndex(index, length) {
 
 export default {
   name: 'RobertBuilder',
+  created() {
+    console.log('component created')
+  },
   computed: {
     saleBgcolorClass() {
       return this.selectedRobot.head.onSale ? 'sale-bgcolor' : ''
