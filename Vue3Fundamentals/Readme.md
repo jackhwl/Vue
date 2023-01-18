@@ -16,3 +16,4 @@
 * Using SASS and Other CSS Pre-processors
 * Using Component Lifecycle Hooks
 * Reducing Duplication with Mixins
+* Demo: Using the Composition and Reactivity APIs Together

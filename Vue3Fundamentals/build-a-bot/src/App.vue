@@ -11,6 +11,7 @@
   </header>
   <main>
     <RobotBuilder />
+    <Search />
   </main>
 </template>
 
