@@ -8,6 +8,11 @@
             Build-a-Bot
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" :to="{name: 'Build'}">
+            Build
+          </router-link>
+        </li>
         <li>
           User: {{ user.userName }}
           <button @click="changeUserName()">Change</button>
@@ -79,5 +84,8 @@ ul {
 .nav-link {
   text-decoration: none;
   color: inherit;
+}
+.router-link-active {
+  color: white;
 }
 </style>
