@@ -20,3 +20,4 @@
 ## Section 4: Enabling Inter-component Communication
 * Creating Child Components
 * Using Props to Share Data with Child Components
+* Validating Props
