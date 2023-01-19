@@ -31,3 +31,4 @@
 * Styling Links Based on the Active Route
 * Navigating from Code
 * Working with Route Params
+* Passing Params as Props
