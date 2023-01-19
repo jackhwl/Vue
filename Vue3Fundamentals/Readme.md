@@ -19,3 +19,4 @@
 * Demo: Using the Composition and Reactivity APIs Together
 ## Section 4: Enabling Inter-component Communication
 * Creating Child Components
+* Using Props to Share Data with Child Components
