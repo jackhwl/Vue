@@ -17,3 +17,5 @@
 * Using Component Lifecycle Hooks
 * Reducing Duplication with Mixins
 * Demo: Using the Composition and Reactivity APIs Together
+## Section 4: Enabling Inter-component Communication
+* Creating Child Components
