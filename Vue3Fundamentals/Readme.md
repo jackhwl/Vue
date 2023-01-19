@@ -25,3 +25,5 @@
 * Injecting Content into a Child Component with Slots
 * Using Teleport to Render Content Elsewhere in the Application
 * Using Provide/Inject to Supply Data to Deeply Nested Components
+## Section 5: Routing from Page to Page
+* Adding Routing to Your App
