@@ -27,3 +27,4 @@
 * Using Provide/Inject to Supply Data to Deeply Nested Components
 ## Section 5: Routing from Page to Page
 * Adding Routing to Your App
+* Linking to Routed Pages
