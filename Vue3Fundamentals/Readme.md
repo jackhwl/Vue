@@ -23,3 +23,4 @@
 * Validating Props
 * Passing Data to Parent Components with Events
 * Injecting Content into a Child Component with Slots
+* Using Teleport to Render Content Elsewhere in the Application
