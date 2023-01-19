@@ -21,3 +21,4 @@
 * Creating Child Components
 * Using Props to Share Data with Child Components
 * Validating Props
+* Passing Data to Parent Components with Events
