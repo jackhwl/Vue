@@ -29,3 +29,4 @@
 * Adding Routing to Your App
 * Linking to Routed Pages
 * Styling Links Based on the Active Route
+* Navigating from Code
