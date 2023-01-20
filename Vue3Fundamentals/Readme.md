@@ -46,3 +46,4 @@
 * Using Actions to Save Data to an API 
 * Returning Promises from Actions
 * Organizing the Store with Modules
+* Namespacing Modules
