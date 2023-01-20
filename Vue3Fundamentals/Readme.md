@@ -34,3 +34,4 @@
 * Passing Params as Props
 * Using Nested Routes
 * Using Named Views
+* Enabling HTML5 History Mode

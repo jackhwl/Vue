@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../home/HomePage.vue'
 import RobotBuilder from '../build/RobotBuilder.vue'
 import PartInfo from '../parts/PartInfo.vue'
@@ -11,7 +11,7 @@ import SidebarStandard from '../sidebars/SidebarStandard.vue'
 import SidebarBuild from '../sidebars/SidebarBuild.vue'
 
 export default createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [{
     path: '/',
     name: 'Home',
