@@ -37,3 +37,5 @@
 * Enabling HTML5 History Mode
 * Preventing Pages from Loading with Navigation Guards
 * Preventing Navigation Away from Pages with Navigation Guards
+## Section 6 Managing State and Server Communication with Vuex
+* Creating a Vuex Store
