@@ -36,3 +36,4 @@
 * Using Named Views
 * Enabling HTML5 History Mode
 * Preventing Pages from Loading with Navigation Guards
+* Preventing Navigation Away from Pages with Navigation Guards
