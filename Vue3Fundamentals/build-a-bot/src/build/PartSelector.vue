@@ -5,7 +5,8 @@
     <router-link :to="{
         name: 'Parts',
         params: {
-          id: this.selectedPart.id, partType: this.selectedPart.type
+          id: this.selectedPart.id,
+          partType: this.selectedPart.type
         }
     }">
     <img :src="selectedPart.src" title="arm"/>

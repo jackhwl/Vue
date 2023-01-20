@@ -35,3 +35,4 @@
 * Using Nested Routes
 * Using Named Views
 * Enabling HTML5 History Mode
+* Preventing Pages from Loading with Navigation Guards
