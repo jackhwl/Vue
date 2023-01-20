@@ -47,3 +47,4 @@
 * Returning Promises from Actions
 * Organizing the Store with Modules
 * Namespacing Modules
+* Accessing Namespaced Getters
