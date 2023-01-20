@@ -55,7 +55,7 @@
         @partSelected="part => selectedRobot.base=part" />
     </div>
   </div>
-  <div>
+  <!-- <div>
     <h1>Cart</h1>
     <table>
       <thead>
@@ -71,7 +71,7 @@
         </tr>
       </tbody>
     </table>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -123,7 +123,7 @@ export default {
         + robot.torso.cost
         + robot.rightArm.cost
         + robot.base.cost
-      this.cart.push({ ...robot, cost })
+      this.$store.commit('addRobotToCart', { ...robot, cost })
       this.addedToCart = true
     }
   }
@@ -239,14 +239,14 @@ export default {
   padding: 3px;
   font-size: 16px;
 }
-.td, th {
-  text-align: left;
-  padding: 5px;
-  padding-right: 20px;
-}
-.cost {
-  text-align: right;
-}
+// .td, th {
+//   text-align: left;
+//   padding: 5px;
+//   padding-right: 20px;
+// }
+// .cost {
+//   text-align: right;
+// }
 .sale-bgcolor {
   background-color: pink;
 }

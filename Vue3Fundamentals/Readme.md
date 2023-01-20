@@ -39,3 +39,5 @@
 * Preventing Navigation Away from Pages with Navigation Guards
 ## Section 6 Managing State and Server Communication with Vuex
 * Creating a Vuex Store
+* Changing Vuex Store State with Mutations
+* Retreiving Items from the Vue Store
