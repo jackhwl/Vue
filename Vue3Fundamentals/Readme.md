@@ -59,3 +59,4 @@
 * Using Directive Lifecycle Hooks
 * Making Directives Available Globally
 * Creating a Custom Filter
+* Declaring Filters Globally
