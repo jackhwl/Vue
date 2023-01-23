@@ -49,3 +49,4 @@
 * Namespacing Modules
 * Accessing Namespaced Getters
 * Understanding Global and Namespaced State
+* Using the Vues MapState Helper
