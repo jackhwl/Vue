@@ -53,3 +53,5 @@
 * Using the Vues MapGetters Helper
 * Using the Vues MapActions Helper
 * Using the Vuex MapMutations Helper
+## Section 7: Creating Custom Directives and Filters
+* Creating a Custom Directive
