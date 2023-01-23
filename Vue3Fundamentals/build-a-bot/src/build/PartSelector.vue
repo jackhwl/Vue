@@ -1,6 +1,6 @@
 <template>
   <div class="part" :class="position">
-    <div>User: {{ user.userName }}</div>
+    <div>User: {{ user.userName }} {{ pinPadding }}</div>
     <!-- <img :src="selectedPart.src" title="arm" @click="showPartInfoes()"/> -->
     <router-link :to="{
         name: 'Parts',
@@ -13,7 +13,7 @@
     </router-link>
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
-    <span v-pin="{ bottom: '10px', right: '5px' }"
+    <span @click="pinPadding='30px'" v-pin="{ bottom: pinPadding, right: pinPadding }"
       class="sale" v-show="selectedPart.onSale">Sale!</span>
     <teleport to="#partInfo" v-if="showPartInfo">
       <div>
@@ -51,7 +51,7 @@ export default {
     }
   },
   data() {
-    return { selectedPartIndex: 0, showPartInfo: false };
+    return { selectedPartIndex: 0, showPartInfo: false, pinPadding: '10px' };
   },
   computed: {
     selectedPart() {

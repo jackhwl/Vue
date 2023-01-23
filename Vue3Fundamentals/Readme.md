@@ -56,3 +56,4 @@
 ## Section 7: Creating Custom Directives and Filters
 * Creating a Custom Directive
 * Passing Data to Directives
+* Using Directive Lifecycle Hooks
