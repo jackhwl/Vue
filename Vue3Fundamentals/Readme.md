@@ -58,3 +58,4 @@
 * Passing Data to Directives
 * Using Directive Lifecycle Hooks
 * Making Directives Available Globally
+* Creating a Custom Filter
