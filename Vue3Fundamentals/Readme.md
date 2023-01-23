@@ -52,3 +52,4 @@
 * Using the Vues MapState Helper
 * Using the Vues MapGetters Helper
 * Using the Vues MapActions Helper
+* Using the Vuex MapMutations Helper
