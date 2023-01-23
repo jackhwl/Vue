@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   name: 'App',
@@ -72,15 +72,17 @@ export default {
     // usersFoo() {
     //   return this.$store.state.users.foo
     // },
-    rootGetterFoo() {
-      return this.$store.getters.foo
-    },
-    robotsGetterFoo() {
-      return this.$store.getters['robots/foo']
-    },
-    usersGetterFoo() {
-      return this.$store.getters['users/foo']
-    },
+    ...mapGetters({ rootGetterFoo: 'foo' }),
+    ...mapGetters('robots', { robotsGetterFoo: 'foo' }),
+    // rootGetterFoo() {
+    //   return this.$store.getters.foo
+    // },
+    // robotsGetterFoo() {
+    //   return this.$store.getters['robots/foo']
+    // },
+    // usersGetterFoo() {
+    //   return this.$store.getters['users/foo']
+    // },
     cart() {
       return this.$store.state.robots.cart
     }
