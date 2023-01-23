@@ -57,3 +57,4 @@
 * Creating a Custom Directive
 * Passing Data to Directives
 * Using Directive Lifecycle Hooks
+* Making Directives Available Globally
