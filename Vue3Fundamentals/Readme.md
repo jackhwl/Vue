@@ -48,3 +48,4 @@
 * Organizing the Store with Modules
 * Namespacing Modules
 * Accessing Namespaced Getters
+* Understanding Global and Namespaced State
