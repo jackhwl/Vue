@@ -60,3 +60,5 @@
 * Making Directives Available Globally
 * Creating a Custom Filter
 * Declaring Filters Globally
+## Section 8: Deploying Vue Applications to Production
+* Creating a Basic Vue.js Build with the CLI
