@@ -66,3 +66,5 @@
 * Using Environment Variables and Build Modes
 * Deploying to a Production Webserver
 * Handling Deep Linking on the Server
+* Inspecting the Built-in Webpack Config
+** vue inspect --mode=production > webpack.config.js
