@@ -12,6 +12,9 @@
 <script>
 export default {
   name: 'HomePage',
+  created() {
+    console.log(process.env.VUE_APP_TEST)
+  },
   props: {
     msg: String
   }
