@@ -68,3 +68,4 @@
 * Handling Deep Linking on the Server
 * Inspecting the Built-in Webpack Config
 ** vue inspect --mode=production > webpack.config.js
+* Customizing Webpack Config
